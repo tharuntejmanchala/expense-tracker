@@ -1,0 +1,143 @@
+:root {
+    --primary: #2e86de;
+    --accent: #00b894;
+    --danger: #e17055;
+    --background: #f7faff;
+    --card: #fff;
+    --text: #222f3e;
+    --border: #e1e8ed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 720px;
+    margin: 40px auto;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 6px 32px rgba(44, 62, 80, 0.08);
+    padding: 32px 24px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: 2.4rem;
+    margin-bottom: 0.2em;
+}
+
+.subtitle {
+    color: #636e72;
+    margin-bottom: 0.6em;
+}
+
+.add-expense form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.add-expense input[type="date"],
+.add-expense input[type="number"],
+.add-expense input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: 170px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.add-expense input:focus {
+    border: 1.5px solid var(--primary);
+}
+
+.add-expense button {
+    padding: 10px 22px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.add-expense button:hover {
+    background: var(--accent);
+}
+
+.expenses-list h2 {
+    text-align: left;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+#expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(44, 62, 80, 0.06);
+}
+
+#expenses-table th, #expenses-table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    font-size: 1rem;
+}
+#expenses-table th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+#expenses-table td:last-child {
+    width: 80px;
+}
+
+#expenses-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#expenses-table button {
+    padding: 6px 14px;
+    background: var(--danger);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#expenses-table button:hover {
+    background: #d63031;
+}
+
+footer {
+    text-align: center;
+    color: #8395a7;
+    margin-top: 32px;
+    font-size: 1.05rem;
+}
